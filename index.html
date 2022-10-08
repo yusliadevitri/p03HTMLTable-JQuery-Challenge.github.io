@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css" />
+  <title>HTML TABLE SEDERHANA</title>
+</head>
+<h2><center>5 Kawan Terbaik</center></h2>
+<body>
+<table>
+  <tr>
+    <th class="NIM">NIM</th>
+    <th class="Nama">NAMA</th>
+    <th class="Alamat">ALAMAT</th>
+    <th class= "Aksi">AKSI</th>
+  </tr>
+  <tr>
+    <td class="text">41226657</td>
+    <td class="text">Rika Septyani</td>
+    <td class="text">Tangkil</td>
+     <td class="text" class="Hapus">Delete</td>
+  </tr>
+  <tr>
+    <td class="text">41223425</td>
+    <td class="text">Nabilla</td>
+    <td class="text">Kalisapu</td>
+    <td class="text">Delete</td>
+  </tr>
+  <tr>
+    <td class="text">41226154</td>
+    <td class="text">Latifah</td>
+    <td class="text">Watubelah</td>
+     <td class="text">Delete</td>
+  </tr>
+  <tr>
+    <td class="text">41226456</td>
+    <td class="text">Yasni Optarina</td>
+    <td class="text">Ciamis</td>
+    <td class="text">Delete</td>
+  </tr>
+  <tr>
+    <td class="text">41226098</td>
+    <td class="text">Dian</td>
+    <td class="text">Kedawung</td>
+    <td class="text">Delete</td>
+  </tr>
+
+</table>
+
+  <div class="tombol-kembali">
+      <a onclick="alert('Kamu mau kembali?')" href="../index.html"
+        >Back to Home</a
+      >
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+<script>
+ $(document).ready(function(){ $('.text').click(function(){ 
+  let text = $(this).text();
+  alert(`Anda mengklik text yang berisi text "${text}"`);
+   if(text!='Delete'){ 
+    let text2 = prompt('Mau diubah?:', text);
+    if(!text2) return; $(this).text(text2); }
+    else{ let yakin = confirm('Yakin?'); if(!yakin) return;  } }) }) 
+</script>
+
+</body>
+</html>
